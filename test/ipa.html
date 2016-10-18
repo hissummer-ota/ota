@@ -1,0 +1,12 @@
+
+<h1>IPhone ota 安装测试页 - 仅用于测试</h1>
+
+
+<a href="itms-services://?action=download-manifest&url=https://172.16.2.37/ota/test/apps/HeikaTest_Release_master_2016-03-01_16:39:42.plist">HeikaTest_Release_master_2016-03-01_16:39:42-37.plist 含有_,:特殊字符 </a> 结果：无法安装，提示无法连接到。  验证证书的问题，证书的hostname必须和地址相同<br/>
+<a href="itms-services://?action=download-manifest&url=https://qa.heika.com/ota/test/apps/manifest-ne.xml">qa.heika.com , plist下载路径无中文, ipa 地址有中文.ipa</a> 测试结果： 中文的ipa下载路径可以正常下载<br/>
+<a href="itms-services://?action=download-manifest&url=https://qa.heika.com/ota/test/apps/manifest.xml">qa.heika.com , plist无中文路径.ipa</a> 测试结果：正确，提示安装<br/>
+<a href="itms-services://?action=download-manifest&url=https://qa.heika.com/ota/test/apps/测试/manifest.xml">qa.heika.com , plist地址有中文路径.ipa</a> 测试结果： 无任何提示及响应<br/>
+<a href="itms-services://?action=download-manifest&url=https://qa.heika.com/jenkins/job/IOS%E6%9E%84%E5%BB%BA/lastSuccessfulBuild/artifact/output/HeikaTest_Release_master_2016-03-02_18%3A43%3A23.xml">qa.heika.com-jenkins url, 含有中文路径.ipa</a>测试结果： 无任何相应 <br/>
+<a href="itms-services://?action=download-manifest&url=https://qa.heika.com/jenkins/plist/68/artifact/output/HeikaTest_Release_master_2016-03-02_18:43:23.xml">qa.heika.com-jenkins(jenkins 中文路径被rewrite, 解决中文路径问题).ipa</a> 测试结果： url的中文被英文rewrite后，正常<br/>
+<a href="itms-services://?action=download-manifest&https://qa.heika.com/jenkins/plist/68/artifact/output/HeikaTest_Release_master_2016-03-02_18:43:23.xml">qa.heika.com-jenkins(jenkins 中文路径被rewrite, 解决中文路径问题).ipa</a> 测试结果： url的中文被英文rewrite后，正常<br/>
+<a href="itms-services://?action=download-manifest&url=https://172.16.2.45/plist/109">test-45.ipa</a> 测试结果: 172.16.2.45 的plist地址，可以正常。前提安装了172.16.2.45的证书<br/>
